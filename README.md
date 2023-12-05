@@ -17,4 +17,4 @@ int range = max - min + 1;
 int rand = (int)(Math.random() * range) + min;
 System.out.println(rand);
 
-In this code, Math.random() generates a random double between 0.0 and 1.0. Multiplying this by range scales the range to between 0.0 and range. Adding min then shifts the range to between min and max
+In this code, Math.random() generates a random double between 0.0 and 1.0. Multiplying this by range scales the range to between 0.0 and range. Adding min then shifts the range to between min and max# NumberGuessingGame
