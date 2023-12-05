@@ -4,38 +4,40 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        int guess_no = 0;
-        int random_no = 0;
-        System.out.println("\n ************ HELLO lETS PLAY A GAME ********** \n");
+        int guess_no = 0 ;
+        //declaring the range of the random number to be generated
+        int min = 5;
+        int max = 50 ;
+        int range = min - max + 5;
+        int random_no= (int)(Math.random() *range ) + min;
 
-        System.out.println("\t So, Here's the gist, You guess a number and if you get it right, You win Money 💸😂💸😂");
+        System.out.println("\n *********************************** HELLO lETS PLAY A GAME **************************** \n");
+
+        System.out.println("\t So, Here's the gist, You guess a number and if you get it right, You get to win Money 💸😂💸😂");
 
         Scanner in = new Scanner(System.in);
         
-
-            System.out.print("\t Enter your guess number>>");
+        do{
+        System.out.print("\n \t Enter your guess number >> ");
+          
             try{
                 guess_no = in.nextInt();
-            }
-            catch(InputMismatchException e){
-                System.out.println("Invalid input, retry!");
-            }
-                if (guess_no<random_no) {
-                    System.out.println("The Number you entered is less than the actual number");
-                    
+                if(guess_no<random_no){
+                //implement GUI
+                System.out.println("\t Oops! The number you entered is less than the Actual Number. TRY AGAIN");
                 }
                 else if(guess_no>random_no){
-                    System.out.println("The Number you entered is greater than the actual number");
-                   
+                    System.out.println("\t Gotcha! The number you entered is more than the Actual Number. TRY AGAIN");
                 }
                 else if (guess_no == random_no){
-
+                    System.out.println("\t CONGRATULATIONS MY FRIEND. \n \tSUCH A GOOD GUESSER YOU WIN $240");
                 }
-                    
-               
-                    
+                }
+            catch(InputMismatchException e){
+            System.out.println("\t Invalid input, retry!");
+            }
             
-               
-            }        
-
+        }  while(guess_no != random_no); 
     }
+
+}
