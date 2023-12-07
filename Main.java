@@ -8,11 +8,13 @@ public class Main {
         //declaring the range of the random number to be generated
         int min = 5;
         int max = 50 ;
-        int range = min - max + 5;
+        int range = max - min + 5;
         int random_no= (int)(Math.random() *range ) + min;
+        
 
         System.out.println("\n *********************************** HELLO lETS PLAY A GAME **************************** \n");
 
+        
         System.out.println("\t So, Here's the gist, You guess a number and if you get it right, You get to win Money 💸😂💸😂");
 
         Scanner in = new Scanner(System.in);
