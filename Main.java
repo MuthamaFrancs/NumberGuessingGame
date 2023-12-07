@@ -1,14 +1,17 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+
+///sdsd
+
 public class Main {
 
     public static void main(String[] args) {
         int guess_no = 0 ;
         //declaring the range of the random number to be generated
-        int min = 5;
-        int max = 50 ;
-        int range = max - min + 5;
+        int min = 1;
+        int max = 10 ;
+        int range = max - min + 1;
         int random_no= (int)(Math.random() *range ) + min;
         
 
