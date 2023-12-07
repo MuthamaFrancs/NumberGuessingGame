@@ -23,10 +23,10 @@ public class guessGame {
                 guess_no = in.nextInt();
                 if(guess_no<random_no){
                 //implement GUI
-                System.out.println("\t Oops! The number you entered is less than the Actual Number. TRY AGAIN \n");
+                System.out.println("\n \t Oops! The number you entered is less than the Actual Number. TRY AGAIN \n");
                 }
                 else if(guess_no>random_no){
-                    System.out.println("\t Gotcha! The number you entered is more than the Actual Number. TRY AGAIN \n");
+                    System.out.println("\n \t Gotcha! The number you entered is more than the Actual Number. TRY AGAIN \n");
                 }
                 else if (guess_no == random_no){
                     System.out.println("\t CONGRATULATIONS MY FRIEND. \n \tSUCH A GOOD GUESSER YOU WIN $240\n");
