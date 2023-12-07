@@ -1,4 +1,9 @@
 # NumberGuessingGame
+
+TO DO 
+1. Add GUI 
+2. Implement number of attempts
+3. 
 implementing the Math.random() method.
 The Math.random() method in Java is a built-in function that returns a pseudorandom double greater than or equal to 0.0 and less than 1.0. It's a static method, so you can call it directly using the class name Math.
 

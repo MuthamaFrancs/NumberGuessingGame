@@ -18,7 +18,7 @@ public class Main {
                 game1.guessingGame();
                 break;
             case 0 :
-                System.out.println("+                                   BYE                                   +");
+                System.out.println("                                   BYE                                   \n");
                 System.exit(0);
             default:
                 break;
