@@ -9,6 +9,7 @@ public class guessGame {
     private int max = 10 ;
     private int range = max - min + 1;
     private int random_no= (int)(Math.random() *range ) + min;
+    
     Scanner in = new Scanner(System.in);
 
     guessGame(){
@@ -33,17 +34,28 @@ public class guessGame {
                     System.out.println(" \t Number of trials :"+ no_of_guesses);
                 }
                 else if (guess_no == random_no){
-                    System.out.println(" \t Number of trials :"+ no_of_guesses);
-                    System.out.println("\n  \t CONGRATULATIONS MY FRIEND.  \tSUCH A GOOD GUESSER YOU WIN $240\n");
                     
+                    System.out.println("\n  \t CONGRATULATIONS YOUR GUESS IS RIGHT!. NO OF TRIALS IS : "+ no_of_guesses +"   \tSUCH A GOOD GUESSER YOU WIN $240\n");
+                    if (no_of_guesses<4) {
+                        break;
+                    }
+                    // this break statement is responsible for situations where the user enters the correct guess at first attempt
                 }
-                
+                else{
+                    
+                    System.out.println("You have reached maximum number of attempts");
+                }
                 }
             catch(InputMismatchException e){
             System.out.println("\t Invalid input, retry! \n");
             }
+            
         }
-  
+        
+        if (no_of_guesses > 3) {
+            System.out.println("You have reached the maximum number of attempts. The correct number was: " + random_no);
+        }
+        
     }
 }
  
