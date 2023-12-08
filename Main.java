@@ -9,7 +9,7 @@ public class Main {
         Scanner in = new Scanner(System.in);
         guessGame game1 = new guessGame();
         game1.guessingGame();
-        
+        System.out.println("\n \t You have reached maximum number of trials!");
         System.out.print("\t to Continue playing? Enter 1 :");
         System.out.print("\t to Quit Enter 0");
         int choice=in.nextInt();

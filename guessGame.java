@@ -16,14 +16,13 @@ public class guessGame {
     }
 
     public void guessingGame(){
-     
-        do{
-        for(int i = 0; i<no_of_guesses; i++){
-            System.out.print("\n \t Enter your guess number >> ");
+  
+        for(no_of_guesses=1;no_of_guesses<4 ;no_of_guesses++){
 
+            System.out.print("\n \t Enter your guess number >> ");
             try{
                 guess_no = in.nextInt();
-                
+            
                 if(guess_no<random_no){
                 //implement GUI
                 System.out.println("\n \t Oops! The number you entered is less than the Actual Number. TRY AGAIN \n");
@@ -34,17 +33,17 @@ public class guessGame {
                     System.out.println(" \t Number of trials :"+ no_of_guesses);
                 }
                 else if (guess_no == random_no){
-                    System.out.println("\t CONGRATULATIONS MY FRIEND. \n \tSUCH A GOOD GUESSER YOU WIN $240\n");
                     System.out.println(" \t Number of trials :"+ no_of_guesses);
+                    System.out.println("\n  \t CONGRATULATIONS MY FRIEND.  \tSUCH A GOOD GUESSER YOU WIN $240\n");
+                    
                 }
+                
                 }
             catch(InputMismatchException e){
             System.out.println("\t Invalid input, retry! \n");
             }
         }
-            no_of_guesses ++;
-        }  
-        while(guess_no != random_no);
-
+  
     }
 }
+ 
