@@ -9,6 +9,7 @@ public class guessGame {
     private int max = 10 ;
     private int range = max - min + 1;
     private int random_no= (int)(Math.random() *range ) + min;
+    private int awards = (int)(Math.random()* range * 5);
     
     Scanner in = new Scanner(System.in);
 
@@ -35,7 +36,7 @@ public class guessGame {
                 }
                 else if (guess_no == random_no){
                     
-                    System.out.println("\n  \t CONGRATULATIONS YOUR GUESS IS RIGHT!. NO OF TRIALS IS : "+ no_of_guesses +"   \tSUCH A GOOD GUESSER YOU WIN $240\n");
+                    System.out.println("\n  \t CONGRATULATIONS YOUR GUESS IS RIGHT!. NO OF TRIALS IS : "+ no_of_guesses +"   \tSUCH A GOOD GUESSER YOU WIN $" + awards +"\n");
                     if (no_of_guesses<4) {
                         break;
                     }
