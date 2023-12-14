@@ -10,10 +10,15 @@ public class Main {
         guessGame game1 = new guessGame();
         game1.guessingGame();
        
-        System.out.print("\n to Continue playing? Enter 1 :");
-        System.out.println("\t to Quit Enter 0");
-        int choice=in.nextInt();
-        switch (choice) {
+        
+        
+        
+        int i = 0;
+        do {
+            System.out.print("\n to Continue playing? Enter 1 :");
+            System.out.println("\t to Quit Enter 0");
+            int choice=in.nextInt();
+            switch (choice) {
             case 1 :
                 game1.guessingGame();
                 break;
@@ -23,6 +28,9 @@ public class Main {
             default:
                 break;
         }
+        }
+        while(i<1);
+        
         in.close();
     }
 
